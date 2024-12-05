@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int swap(int a, int b) {
+    a = a + b;  // swap without using pointers or a temp variable
+    b = a - b;
+    a = a - b;
+}
+
+int main() {
+    int x = 5, y = 10;
+
+    printf("Before swap: x = %d, y = %d\n", x, y);
+    
+    swap(x, y);  //  (no pointer reference)
+    
+    printf("After swap: x = %d, y = %d\n", x, y);
+    
+    return 0;
+}
